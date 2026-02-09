@@ -1,13 +1,12 @@
 [phases.setup]
 nixPkgs = [
   "nodejs_20",
-  "python3",  # Нужен для некоторых native модулей
-  "gcc",      # Компилятор для native модулей
-  "make",
+  "python3",
+  "gcc",
+  "make", 
   "pkg-config"
 ]
 
-# Добавляем cache для ускорения сборки
 [phases.setup.cache]
 directories = [
   "/root/.npm",
@@ -15,10 +14,11 @@ directories = [
 ]
 
 [phases.install]
-cmd = "npm ci --legacy-peer-deps"
+cmd = "npm install -g yarn && yarn install --frozen-lockfile"
+
 
 [phases.build]
-cmd = "npm run build"
+cmd = "yarn run build"
 
 [start]
 cmd = "node .output/server/index.mjs"
