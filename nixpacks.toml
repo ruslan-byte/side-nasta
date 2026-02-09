@@ -1,0 +1,12 @@
+[phases.install]
+cmds = ["npm install"]
+
+[phases.build]
+cmds = ["npm run build"]
+
+[start]
+cmd = "node .output/server/index.mjs"
+
+[build.environment]
+NODE_ENV = "production"
+PORT = "3000"
