@@ -1,12 +1,11 @@
+[phases.setup]
+nixPkgs = ["nodejs_20"]
+
 [phases.install]
-cmds = ["npm install"]
+cmd = "yarn install"
 
 [phases.build]
-cmds = ["npm run build"]
+cmd = "yarn build"
 
 [start]
 cmd = "node .output/server/index.mjs"
-
-[build.environment]
-NODE_ENV = "production"
-PORT = "3000"
