@@ -1,0 +1,50 @@
+export default {
+  theme: {
+    colors: {
+      blue: "#5c6aff",
+      "blue-hover": "#7e89ff",
+      "blue-active": "#4a58ef",
+      "blue-pale": "#f2f4ff",
+      "blue-light": "#e9ecff",
+      "blue-dark": "#1f255a",
+      "gray-light": "#f5f6fa",
+      "gray-pale": "#f2f2f2",
+      gray: "#828482",
+      orange: "#fc7d00",
+      white: "#ffffff",
+      "orange-hover": "#FB6300",
+      "orange-active": "#FA4F00",
+      "orange-light": "#FFE8CF",
+      main: "#4d4d4d",
+      black: "#333333",
+      "black-primary": "#262525",
+      "black-secondary": "#484f55",
+      "background-color": "#fafafa",
+      transparent: "#ffffff00",
+      red: "#EB5757",
+      "red-light": "#FFEEEE",
+      "gray-dark": "#484F55",
+    },
+    extend: {
+      fontWeight: {
+        semibold: "600",
+        bold: "700",
+        regular: "400",
+        black: "800",
+      },
+      lineHeight: {},
+      fontSize: {
+        regular: "1rem",
+        caption: "0.875rem",
+        small: "0.75rem",
+        "very-small": "0.625rem",
+      },
+      screens: {
+        mobile: "360px",
+      },
+    },
+  },
+  content: {
+    files: ["./app/**/*.{vue,js,jsx,mjs,ts,tsx}"],
+  },
+};
