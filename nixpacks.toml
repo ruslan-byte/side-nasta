@@ -1,11 +1,24 @@
 [phases.setup]
-nixPkgs = ["nodejs_20"]
+nixPkgs = [
+  "nodejs_20",
+  "python3",  # Нужен для некоторых native модулей
+  "gcc",      # Компилятор для native модулей
+  "make",
+  "pkg-config"
+]
+
+# Добавляем cache для ускорения сборки
+[phases.setup.cache]
+directories = [
+  "/root/.npm",
+  "/app/node_modules"
+]
 
 [phases.install]
-cmd = "yarn install"
+cmd = "npm ci --legacy-peer-deps"
 
 [phases.build]
-cmd = "yarn build"
+cmd = "npm run build"
 
 [start]
 cmd = "node .output/server/index.mjs"
