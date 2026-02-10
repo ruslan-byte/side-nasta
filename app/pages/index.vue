@@ -8,7 +8,7 @@
         <NuxtLink href="/ege-generator">
           <Button class="w-full">Генератор ЕГЭ</Button>
         </NuxtLink>
-        <Button disabled>Кухня (пока не доступна)</Button>
+        <Button disabled>Выход на улицу (пока не доступна)</Button>
         <Button disabled>Кабинет (Скоро закончим ремонт)</Button>
         <Button disabled>Попугайня (Попугаи в отпуске)</Button>
         <a href="https://t.me/litva1318" target="_blank">

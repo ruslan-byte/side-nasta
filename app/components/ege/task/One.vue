@@ -2,12 +2,12 @@
   <div class="my-4 p-4 bg-white border border-gray-light">
     <div class="flex mb-4">
       <div class="border size-5 leading-5 text-center mr-2">1</div>
-      <div>
+      <div class="font-semibold">
         Установите соответствие между событиями и годами: к каждой позиции
         первого столбца подберите соответствующую позицию из второго столбца.
       </div>
     </div>
-    <div class="flex">
+    <div class="flex mb-4">
       <div class="flex-1 border-r border-gray mr-4 pr-4">
         <div class="text-center">СОБЫТИЯ</div>
         <div v-for="(event, index) of data.events">
@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-    <p class="mb-4">
+    <p class="mb-4 font-semibold">
       Запишите в таблицу выбранные цифры под соответствующими буквами.
     </p>
     <div class="flex items-center">

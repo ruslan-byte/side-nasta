@@ -5,14 +5,33 @@
     >
     <h2 class="mb-4">Темы для ЕГЭ</h2>
     <p class="mb-4">
-      Выбери темы которые мы уже прошли и я создам по ним вариант ЕГЭ, который
-      ты можешь сделать на 100
+      Выбери темы которые мы уже прошли и я создам по ним вариант ЕГЭ
     </p>
 
-    <div class="italic mb-4">Заметка для себя - подготовить список тем</div>
     <div class="mb-4">
       <label
+        class="block p-2 cursor-pointer hover:text-accent active:text-primary font-semibold"
+      >
+        <input
+          class="mr-2"
+          type="checkbox"
+          :checked="activeThemeList.length === themeList?.length"
+          @change="
+            (newVal) => {
+              if (!themeList) return;
+              if (newVal.target.checked) {
+                activeThemeList = themeList.map((item) => item.id);
+              } else {
+                activeThemeList = [];
+              }
+            }
+          "
+        />
+        Выбрать все
+      </label>
+      <label
         v-for="theme of themeList"
+        :key="theme.id"
         class="block p-2 cursor-pointer hover:text-accent active:text-primary"
       >
         <input
