@@ -1,22 +1,22 @@
 <template>
   <div class="g-container pt-8 pb-20">
-    <h2 class="mb-2">Сайт Насти</h2>
-    <h3 class="mb-4">Я не компания, я частный репетитор</h3>
-    <h4 class="mb-4">Тут пока что ничего нет</h4>
-    <p class="mb-4">
-      Приходите позже, я сделаю тут для вас генератор вариантов по ЕГЭ
-    </p>
+    <h1 class="mb-6">Домик Насти</h1>
 
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="size-10 fill-red"
-      viewBox="0 0 16 16"
-      fill="none"
-    >
-      <path
-        d="M1.24264 8.24264L8 15L14.7574 8.24264C15.553 7.44699 16 6.36786 16 5.24264V5.05234C16 2.8143 14.1857 1 11.9477 1C10.7166 1 9.55233 1.55959 8.78331 2.52086L8 3.5L7.21669 2.52086C6.44767 1.55959 5.28338 1 4.05234 1C1.8143 1 0 2.8143 0 5.05234V5.24264C0 6.36786 0.44699 7.44699 1.24264 8.24264Z"
-      />
-    </svg>
+    <div class="border border-primary rounded p-4">
+      <h3 class="mb-4">Комнаты в домике</h3>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <NuxtLink href="/ege-generator">
+          <Button class="w-full">Генератор ЕГЭ</Button>
+        </NuxtLink>
+        <Button disabled>Кухня (пока не доступна)</Button>
+        <Button disabled>Кабинет (Скоро закончим ремонт)</Button>
+        <Button disabled>Попугайня (Попугаи в отпуске)</Button>
+        <a href="https://t.me/litva1318" target="_blank">
+          <Button class="w-full">Записаться на уроки</Button>
+        </a>
+        <Button disabled>Комната отдыха (Отдыхать пока нельзя)</Button>
+      </div>
+    </div>
   </div>
 </template>
 <script setup lang="ts"></script>

@@ -1,0 +1,60 @@
+<template>
+  <div class="my-4 p-4 bg-white border border-gray-light">
+    <div class="flex mb-4">
+      <div class="border size-5 leading-5 text-center mr-2">1</div>
+      <div>
+        Установите соответствие между событиями и годами: к каждой позиции
+        первого столбца подберите соответствующую позицию из второго столбца.
+      </div>
+    </div>
+    <div class="flex">
+      <div class="flex-1 border-r border-gray mr-4 pr-4">
+        <div class="text-center">СОБЫТИЯ</div>
+        <div v-for="(event, index) of data.events">
+          {{ ["A", "Б", "В", "Г"][index] }}) {{ event.label }}
+        </div>
+      </div>
+      <div class="flex-1">
+        <div class="text-center">ГОДЫ</div>
+        <div v-for="(year, index) of data.years">
+          {{ index + 1 }}) {{ year }} г
+        </div>
+      </div>
+    </div>
+    <p class="mb-4">
+      Запишите в таблицу выбранные цифры под соответствующими буквами.
+    </p>
+    <div class="flex items-center">
+      <div class="mr-4">Ответ</div>
+      <table>
+        <tbody>
+          <tr>
+            <td class="border size-8 text-center">А</td>
+            <td class="border size-8 text-center">Б</td>
+            <td class="border size-8 text-center">В</td>
+            <td class="border size-8 text-center">Г</td>
+          </tr>
+          <tr>
+            <td class="border size-8">
+              <input type="text" class="size-8 text-center" />
+            </td>
+            <td class="border size-8">
+              <input type="text" class="size-8 text-center" />
+            </td>
+            <td class="border size-8">
+              <input type="text" class="size-8 text-center" />
+            </td>
+            <td class="border size-8">
+              <input type="text" class="size-8 text-center" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</template>
+<script setup lang="ts">
+import type { IEgeEventTask } from "~~/types/ege.type";
+
+const props = defineProps<{ data: IEgeEventTask }>();
+</script>

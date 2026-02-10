@@ -1,6 +1,10 @@
+// #7608AA	#62247F	#4C036E	#A43DD4	#B165D4
 export default {
   theme: {
     colors: {
+      primary: "#7608AA",
+      secondary: "#62247F",
+      accent: "#B165D4",
       blue: "#5c6aff",
       "blue-hover": "#7e89ff",
       "blue-active": "#4a58ef",
