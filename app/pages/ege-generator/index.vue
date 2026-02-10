@@ -10,10 +10,40 @@
     </p>
 
     <div class="italic mb-4">Заметка для себя - подготовить список тем</div>
-
-    <NuxtLink href="/ege-generator/2,3">
+    <div class="mb-4">
+      <label
+        v-for="theme of themeList"
+        class="block p-2 cursor-pointer hover:text-accent active:text-primary"
+      >
+        <input
+          class="mr-2"
+          type="checkbox"
+          :checked="activeThemeList.includes(theme.id)"
+          @change="
+            (newVal) => {
+              if (newVal.target.checked) activeThemeList.push(theme.id);
+              else {
+                activeThemeList = activeThemeList.filter(
+                  (activeThemeId) => activeThemeId !== theme.id,
+                );
+              }
+            }
+          "
+        />
+        {{ theme.label }}
+      </label>
+    </div>
+    <NuxtLink
+      :href="`/ege-generator/${activeThemeList.join(',')}`"
+      v-if="activeThemeList.length > 0"
+    >
       <Button>Открыть</Button>
     </NuxtLink>
+    <Button v-else disabled>Открыть</Button>
   </div>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { data: themeList } = useFetch("/api/get-theme-list");
+
+const activeThemeList = ref<number[]>([]);
+</script>

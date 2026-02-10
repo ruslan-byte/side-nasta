@@ -20,5 +20,6 @@
   </div>
 </template>
 <script setup lang="ts">
-const { data } = useFetch("/api/generate-variant");
+const themeIds = useRoute().params.ids?.toString();
+const { data } = useFetch(`/api/generate-variant?ids=${themeIds}`);
 </script>

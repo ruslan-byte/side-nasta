@@ -9,6 +9,11 @@ export interface IEgeEventTask {
 export interface IEgeEvent {
   id: number;
   label: string;
-  themeId?: number;
+  themeId: number;
   year: number;
+}
+
+export interface ITheme {
+  id: number;
+  label: string;
 }
