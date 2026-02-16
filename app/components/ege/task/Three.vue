@@ -2,22 +2,27 @@
   <div class="my-4 p-4 bg-white border border-gray-light">
     <div class="flex mb-4">
       <div class="border size-6 leading-5 text-center mr-2 flex-[0_0_auto]">
-        1
+        3
       </div>
       <div class="font-semibold">
-        Установите соответствие между событиями и годами: к каждой позиции
-        первого столбца подберите соответствующую позицию из второго столбца.
+        Установите соответствие между процессами (явлениями, событиями) и
+        фактами, относящимися к этим процессам (явлениям, событиям): к каждой
+        позиции первого столбца подберите соответствующую позицию из второго
+        столбца
       </div>
     </div>
     <div class="flex mb-4">
       <div class="flex-1 border-r border-gray mr-4 pr-4">
-        <div class="text-center">СОБЫТИЯ</div>
+        <div class="text-center">
+          ПРОЦЕССЫ<br />
+          (ЯВЛЕНИЯ, СОБЫТИЯ)
+        </div>
         <div v-for="(event, index) of data?.events">
           {{ ["A", "Б", "В", "Г"][index] }}) {{ event.label }}
         </div>
       </div>
       <div class="flex-1">
-        <div class="text-center">ГОДЫ</div>
+        <div class="text-center">ФАКТЫ</div>
         <div v-for="(year, index) of data?.years">
           {{ index + 1 }}) {{ year }} г
         </div>

@@ -16,10 +16,16 @@
       российских государей следует писать только буквами (например:
       НиколайВторой)
     </p>
-    <ege-task-one v-if="data" :data="data.taskOne"></ege-task-one>
+    <ege-task-one v-if="themeIds" :theme-ids="themeIds"></ege-task-one>
+    <ege-task-two v-if="themeIds" :theme-ids="themeIds"></ege-task-two>
+    <ege-task-three v-if="themeIds" :theme-ids="themeIds"></ege-task-three>
+    <ege-task-four v-if="themeIds" :theme-ids="themeIds"></ege-task-four>
+    <ege-task-five v-if="themeIds" :theme-ids="themeIds"></ege-task-five>
+    <ege-task-six v-if="themeIds" :theme-ids="themeIds"></ege-task-six>
+    <ege-task-seven v-if="themeIds" :theme-ids="themeIds"></ege-task-seven>
+    <ege-task-eight v-if="themeIds" :theme-ids="themeIds"></ege-task-eight>
   </div>
 </template>
 <script setup lang="ts">
 const themeIds = useRoute().params.ids?.toString();
-const { data } = useFetch(`/api/generate-variant?ids=${themeIds}`);
 </script>
