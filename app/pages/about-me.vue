@@ -7,15 +7,15 @@
         alt=""
       />
 
-      <div class="h-[5.375rem]">
+      <div class="h-[5.375rem] mb-4">
         <Transition
           enter-active-class="transition-all"
           enter-from-class="translate-x-9"
           enter-to-class="translate-x-0"
         >
-          <div class="flex flex-col items-center" v-if="isPageLoad">
-            <h2 class="text-main mr-4">Анастасия</h2>
-            <h2 class="text-main ml-8">Алексеевна</h2>
+          <div class="mb-1 flex flex-col items-center" v-if="isPageLoad">
+            <h2 class="text-main">Анастасия</h2>
+            <h2 class="text-main">Алексеевна</h2>
           </div>
         </Transition>
         <Transition
@@ -33,8 +33,8 @@
         </Transition>
       </div>
       <p class="mb-4 text-main">
-        Занимаюсь подготовкой молодых людей к ЕГЭ, сейчас набираю учеников на
-        2026-2027 учебный год.
+        Занимаюсь подготовкой к ЕГЭ, сейчас набираю учеников на 2027 учебный
+        год.
       </p>
 
       <div
@@ -50,7 +50,8 @@
         Преподаю только индивидуально. Онлайн или офлайн по желанию
       </p>
 
-      <h3>Особенности</h3>
+      <about-me-feature-slider class="mb-6" />
+      <about-me-resilt />
     </div>
   </div>
 </template>
