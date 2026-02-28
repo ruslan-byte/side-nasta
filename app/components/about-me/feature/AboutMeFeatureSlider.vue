@@ -5,12 +5,14 @@
       <swiper-container
         :slides-per-view="2"
         :loop="true"
-        :autoplay="{
-          delay: 3000,
-        }"
         :slides-per-group="1"
         space-between="16"
-        alight
+        :breakpoints="{
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 32,
+          },
+        }"
       >
         <template v-for="i of 2">
           <swiper-slide>
