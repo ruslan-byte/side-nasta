@@ -8,7 +8,11 @@ export default defineNuxtConfig({
   ],
   devtools: { enabled: true },
   css: ["./app/assets/css/main.css"],
-  modules: ["@nuxtjs/tailwindcss", "nuxt-swiper"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "nuxt-swiper",
+    "@nuxt/image",
+  ],
   tailwindcss: {
     configPath: "~/tailwind.config.ts",
   },

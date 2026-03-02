@@ -24,6 +24,7 @@
     <ege-task-six v-if="themeIds" :theme-ids="themeIds"></ege-task-six>
     <ege-task-seven v-if="themeIds" :theme-ids="themeIds"></ege-task-seven>
     <ege-task-eight v-if="themeIds" :theme-ids="themeIds"></ege-task-eight>
+    <ege-task-group></ege-task-group>
   </div>
 </template>
 <script setup lang="ts">
